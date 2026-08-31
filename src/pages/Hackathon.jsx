@@ -96,29 +96,20 @@ export default function Hackathon() {
 
       <div className="card">
         <div className="section-header">
-          <h2>Registration & Participation Survey</h2>
+          <h2>Registration</h2>
         </div>
         <p style={{ marginBottom: '1.5rem' }}>
-          Please complete the official Microsoft Forms below to register your participation in the meeting and hackathon tracks:
+          Please complete the official registration form below to register your participation in the meeting and hackathon tracks:
         </p>
         
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <div>
           <a 
             href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=aykR84I-TkyCqajkA6QrEQ6MmegPrIxBkOD8naVZMtxUM0U2NUU1WVpOODdVRk1CMVhIOE5XRUFBRy4u&origin=lprLink&route=shorturl" 
             target="_blank" 
             rel="noreferrer"
             className="btn-action"
           >
-            Complete Registration Form 1
-          </a>
-          
-          <a 
-            href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=aykR84I-TkyCqajkA6QrEeJm91rDVu9IoM1_5WXFpt1UQ0NGQkFTWFo0SkREUFlVOVU5M1dLMTFMSy4u&OR=EXCEL-WEB.BODY.NT&CT=1787648053603" 
-            target="_blank"
-            rel="noreferrer" 
-            className="btn-action btn-secondary"
-          >
-            Complete Registration Form 2 / Survey
+            Complete Registration Form
           </a>
         </div>
       </div>
