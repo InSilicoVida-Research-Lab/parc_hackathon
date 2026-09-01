@@ -84,17 +84,16 @@ export default function Home() {
       <div className="card">
         <div className="section-header">
           <h2>Meeting Themes</h2>
-          <span className="badge badge-gray">7 Core Scientific Areas</span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           {themes.map((theme) => (
-            <div 
-              key={theme.id} 
-              style={{ 
-                padding: '1rem', 
-                backgroundColor: '#f8fafc', 
-                border: '1px solid var(--border-color)', 
-                borderRadius: '8px' 
+            <div
+              key={theme.id}
+              style={{
+                padding: '1rem',
+                backgroundColor: '#f8fafc',
+                border: '1px solid var(--border-color)',
+                borderRadius: '8px'
               }}
             >
               <h3 style={{ color: 'var(--accent-blue)', margin: '0 0 0.35rem 0', fontSize: '1rem' }}>
@@ -107,7 +106,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      
+
       <div className="card">
         <div className="section-header">
           <h2>Abstract & Objectives</h2>
@@ -143,8 +142,8 @@ export default function Home() {
               IISPV & Universitat Rovira i Virgili / BfR
             </p>
             <div>
-              <a 
-                href="mailto:vikas.kumar@urv.cat" 
+              <a
+                href="mailto:vikas.kumar@urv.cat"
                 style={{ fontWeight: '600', fontSize: '0.95rem', color: 'var(--accent-blue)' }}
               >
                 vikas.kumar@urv.cat
@@ -158,8 +157,8 @@ export default function Home() {
               Institut d'Investigació Sanitària Pere Virgili (IISPV)
             </p>
             <div>
-              <a 
-                href="mailto:deepika@irbcatsud.cat" 
+              <a
+                href="mailto:deepika@irbcatsud.cat"
                 style={{ fontWeight: '600', fontSize: '0.95rem', color: 'var(--accent-blue)' }}
               >
                 deepika@irbcatsud.cat

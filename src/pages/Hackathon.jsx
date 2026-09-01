@@ -2,43 +2,78 @@ export default function Hackathon() {
   const themes = [
     {
       id: 1,
-      title: "LLM-Assisted FAIR PBPK Model Building",
-      mentors: "Johannes Delp (BfR / University of Konstanz)",
-      desc: "Developing and evaluating generative AI/LLM workflows to extract pharmacokinetic parameters, curate datasets, and assist in FAIR PBPK model code generation."
+      title: "Agentic System for Weight of Evidence",
+      mentors: "Vikas Kumar (BfR/IRBCATSUD) and Saurav Kumar (IRBCATSUD)",
+      teams: [
+        {
+          teamName: "Team A",
+          members: [
+            { name: "Sandrine Fraize-Frontier", affiliation: "ANSES" },
+            { name: "Edgar López López", affiliation: "Uppsala University" },
+            { name: "Vishak Viswalal", affiliation: "Universitat Rovira i Virgili" }
+          ]
+        }
+      ]
     },
     {
       id: 2,
-      title: "Agentic Systems for Weight of Evidence (WoE)",
-      mentors: "Mirjam Luijten (RIVM), Vikas Kumar (IISPV & BfR)",
-      desc: "Constructing multi-agent LLM systems to synthesize heterogeneous toxicological evidence lines and support automated weight-of-evidence evaluations."
+      title: "AOP Ontology",
+      mentors: "Pance Panov (JSI), Marvin Martens (MU), and Saurav Kumar (IRBCATSUD)",
+      teams: [
+        {
+          teamName: "Team B",
+          members: [
+            { name: "Shubh Sharma", affiliation: "IISPV" },
+            { name: "Teresa D'Amore", affiliation: "Istituto Superiore di Sanità" },
+            { name: "Andrej Studen", affiliation: "Jožef Stefan Institute" }
+          ]
+        }
+      ]
     },
     {
       id: 3,
-      title: "Adverse Outcome Pathway (AOP) Ontology Integration",
-      mentors: "Panče Panov (Jožef Stefan Institute)",
-      desc: "Harmonizing mechanistic toxicology data with formal semantic ontologies to improve interoperability across AOP-Wiki and computational modelling tools."
+      title: "AI-driven QSAR-to-PBPK Pipeline",
+      mentors: "Spyros Karakitsios (AUTH) and Uko Maran (UT)",
+      teams: [
+        {
+          teamName: "Team C",
+          members: [
+            { name: "Daniele Sebastiani", affiliation: "Universitat Rovira i Virgili" },
+            { name: "Achilleas", affiliation: "Aristotle University of Thessaloniki (AUTH)" },
+            { name: "Isaac Mensah", affiliation: "German Federal Institute for Risk Assessment (BfR)" }
+          ]
+        }
+      ]
     },
     {
       id: 4,
-      title: "AI-Driven QSAR-to-PBPK Pipeline Integration",
-      mentors: "Spyros Karakitsios (AUTH)",
-      desc: "Connecting machine learning-based QSAR predictions directly into physiologically based kinetic models for high-throughput internal exposure screening."
+      title: "LLM-Assisted FAIR PBPK Model Building",
+      mentors: "Deepika Deepika (BfR/IRBCATSUD) and Johannes Kruisselbrink (WUR)",
+      teams: [
+        {
+          teamName: "Team D",
+          members: [
+            { name: "Yash Yogesh Gondegaonkar", affiliation: "Institut de Recerca Biomèdica Catalunya Sud (IRBCatSud)" },
+            { name: "Martina Iulini", affiliation: "Università degli Studi di Milano (UMIL)" },
+            { name: "Gautam", affiliation: "Universitat Rovira i Virgili (URV)" }
+          ]
+        }
+      ]
     }
   ];
 
   return (
     <div>
       <div className="card card-hero">
-        <h1 style={{ marginTop: 0 }}>Hackathon Themes & Registration</h1>
+        <h1 style={{ marginTop: 0 }}>Hackathon Themes & Teams</h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', margin: 0 }}>
-          Hands-on collaborative track running in parallel from 07 to 10 September 2026 in Tarragona, Spain.
+          Hands-on collaborative track running in parallel from 7th to 10th September 2026 in Tarragona, Spain.
         </p>
       </div>
 
       <div className="card">
         <div className="section-header">
           <h2>Hackathon Overview & Format</h2>
-          <span className="badge badge-blue">4-Day Parallel Track</span>
         </div>
         <p>
           The hackathon brings together modellers, data scientists, and toxicologists from across the PARC consortium to solve hands-on computational challenges. Teams will work collaboratively throughout the week with dedicated mentor guidance.
@@ -61,33 +96,58 @@ export default function Hackathon() {
 
       <div className="card">
         <div className="section-header">
-          <h2>Hackathon Challenge Themes</h2>
-          <span className="badge badge-gray">4 Dedicated Tracks</span>
+          <h2>Challenge Themes, Mentors & Teams</h2>
         </div>
-        <p style={{ marginBottom: '1.25rem' }}>
-          Participants can form interdisciplinary teams or register individually for one of the following challenge themes:
-        </p>
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {themes.map((theme) => (
-            <div 
-              key={theme.id} 
-              style={{ 
-                padding: '1.25rem', 
-                backgroundColor: '#ffffff', 
-                border: '1px solid var(--border-color)', 
+            <div
+              key={theme.id}
+              style={{
+                padding: '1.5rem',
+                backgroundColor: '#ffffff',
+                border: '1px solid var(--border-color)',
                 borderRadius: '8px',
                 boxShadow: 'var(--shadow-sm)'
               }}
             >
-              <h3 style={{ color: 'var(--accent-blue)', margin: '0 0 0.5rem 0' }}>
+              <h3 style={{ color: 'var(--accent-blue)', margin: '0 0 0.75rem 0', fontSize: '1.2rem' }}>
                 {theme.title}
               </h3>
-              <p style={{ fontSize: '0.94rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
-                {theme.desc}
-              </p>
-              <div style={{ fontSize: '0.88rem', color: 'var(--text-primary)', background: '#f8fafc', padding: '0.5rem 0.75rem', borderRadius: '4px' }}>
-                <strong>Lead Mentors:</strong> {theme.mentors}
+
+              <div style={{ fontSize: '0.92rem', color: 'var(--text-primary)', background: '#f8fafc', padding: '0.75rem 1rem', borderRadius: '6px', border: '1px solid var(--border-color)', marginBottom: '1rem' }}>
+                <strong>Mentors:</strong> {theme.mentors}
+              </div>
+
+              <div>
+                <strong style={{ fontSize: '0.95rem', color: 'var(--text-primary)' }}>Team Members:</strong>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '0.75rem' }}>
+                  {theme.teams.map((team, idx) => (
+                    <div
+                      key={idx}
+                      style={{
+                        padding: '0.85rem 1rem',
+                        background: '#ffffff',
+                        border: '1px solid var(--border-color)',
+                        borderRadius: '6px'
+                      }}
+                    >
+                      <div style={{ fontWeight: '700', color: 'var(--accent-blue)', fontSize: '0.92rem', marginBottom: '0.4rem' }}>
+                        {team.teamName}
+                      </div>
+                      <ul style={{ paddingLeft: '1.2rem', margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                        {team.members.map((member, mIdx) => (
+                          <li key={mIdx} style={{ marginBottom: '0.3rem' }}>
+                            <strong>{member.name}</strong>
+                            <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+                              {member.affiliation}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -101,11 +161,11 @@ export default function Hackathon() {
         <p style={{ marginBottom: '1.5rem' }}>
           Please complete the official registration form below to register your participation in the meeting and hackathon tracks:
         </p>
-        
+
         <div>
-          <a 
-            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=aykR84I-TkyCqajkA6QrEQ6MmegPrIxBkOD8naVZMtxUM0U2NUU1WVpOODdVRk1CMVhIOE5XRUFBRy4u&origin=lprLink&route=shorturl" 
-            target="_blank" 
+          <a
+            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=aykR84I-TkyCqajkA6QrEQ6MmegPrIxBkOD8naVZMtxUM0U2NUU1WVpOODdVRk1CMVhIOE5XRUFBRy4u&origin=lprLink&route=shorturl"
+            target="_blank"
             rel="noreferrer"
             className="btn-action"
           >
